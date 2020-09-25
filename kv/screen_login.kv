@@ -1,0 +1,63 @@
+<ScreenLogin>:
+
+    FloatLayout:
+        Image:
+            source: 'img/logoCelsia.png'
+            pos_hint: {'center_x':0.5, 'center_y':0.8}
+            size: self.size
+
+        MDLabel:
+            text: "OASIS"
+            halign: "center"
+            pos_hint: {'center_x':0.5, 'center_y':0.6}
+            theme_text_color : "Primary"
+            font_style: "H4"
+
+
+        MDTextField:
+            id: scrh_txt_username
+            hint_text: "Enter Username"
+            helper_text: "or click on forgot username"
+            helper_text_mode: "on_focus"
+            icon_right: "android"
+            icon_right_color: app.theme_cls.primary_color
+            pos_hint: {'center_x':0.5, 'center_y':0.4}
+            size_hint_x:None
+            width:300
+
+        MDTextField:
+            id: scrh_txt_password
+            hint_text: "Enter Password"
+            helper_text: "or click on forgot Password"
+            helper_text_mode: "on_focus"
+            icon_right: "key-variant"
+            icon_right_color: app.theme_cls.primary_color
+            pos_hint: {'center_x':0.5, 'center_y':0.3}
+            size_hint_x:None
+            width:300
+            password: True
+
+        MDLabel:
+            id: error
+            halign: "center"
+            pos_hint: {'center_x':0.5, 'center_y':0.2}
+            font_style: "H6"
+
+        MDRectangleFlatButton:
+            text: 'Ingresar'
+            pos_hint: {'center_x':0.5, 'center_y':0.1}
+            on_release: root.validar_acceso(scrh_txt_username.text, scrh_txt_password.text)
+
+        MDLabel:
+            pos_hint: {"x": .65, "top":.08}
+            size_hint: (.2, .1)
+            text: "Modo Noche: "
+            halign: "right"
+            font_style: "Overline"
+            theme_text_color: "Primary"
+
+        MDSwitch:
+            id: mode_theme
+            pos_hint: {"x": .85, "top":.08}
+            size_hint: (.05, .1)
+            on_active: root.change_theme(*args)

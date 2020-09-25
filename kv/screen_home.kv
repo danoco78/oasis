@@ -1,0 +1,9 @@
+<ScreenHome>:
+
+    FloatLayout:
+
+        MDDropDownItem:
+            id: municipios
+            pos_hint: {'center_x': .5, 'center_y': .5}
+            text: 'Seleccione el municipio de trabajo'
+            on_release: root.menu_municipio.open()

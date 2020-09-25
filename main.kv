@@ -1,0 +1,16 @@
+#: include kv/screen_login.kv
+#: include kv/screen_home.kv
+
+NavigationLayout:
+    id: nav_layout
+
+    ScreenManager:
+        id: screen_manager
+
+        ScreenLogin:
+            id: scr_login
+            name: "scr_login"
+
+        ScreenHome:
+            id: scr_home
+            name: "scr_home"
