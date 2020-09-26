@@ -5,7 +5,6 @@ from kivy.uix.screenmanager import Screen
 from baseclass.screen_login import ScreenLogin
 from baseclass.screen_home import ScreenHome
 
-
 Window.size = (350, 550)
 
 

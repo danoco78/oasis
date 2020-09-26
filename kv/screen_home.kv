@@ -1,9 +1,13 @@
 <ScreenHome>:
-
     FloatLayout:
 
         MDDropDownItem:
-            id: municipios
+            id: drop_item
             pos_hint: {'center_x': .5, 'center_y': .5}
-            text: 'Seleccione el municipio de trabajo'
-            on_release: root.menu_municipio.open()
+            text: 'Selecciona un municipio'
+            #on_release: app.menu.open()
+
+        MDRaisedButton:
+            pos_hint: {'center_x': 0.5, 'center_y': 0.3}
+            text: 'Chek Item'
+            on_release: toast(dropdown_item.current_item)

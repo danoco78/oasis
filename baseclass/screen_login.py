@@ -1,6 +1,4 @@
 from kivy.uix.screenmanager import Screen
-from kivymd.uix.dialog import MDDialog
-from kivymd.uix.button import MDFlatButton
 from kivymd.app import MDApp
 from zeep import Client
 
